@@ -8,7 +8,7 @@
 .csf-theme-dark{
 
   .csf-header-inner{
-    background-color: #050505;
+    background-color: $wpdark;
 
     h1{
       color: #fff;
@@ -16,6 +16,11 @@
       small{
         color: #555;
       }
+    }
+
+    img {
+      width: 150px;
+      height: 100%;
     }
   }
 
@@ -53,8 +58,7 @@
 
         a{
           color: #999;
-          background-color: #222;
-          border-bottom: 1px solid #2f2f2f;
+          background-color: $wplightdark;
 
           &:hover{
             color: #fff;
@@ -63,7 +67,7 @@
 
         .csf-active{
           color: #fff;
-          background-color: #111;
+          background-color: $wpblue;
 
           &:after{
             content: " ";
@@ -91,7 +95,7 @@
           }
 
           .csf-active{
-            background-color: #101010;
+            background-color: $wpblue;
           }
         }
 
@@ -107,12 +111,12 @@
   }
 
   .csf-nav-background{
-    background-color: #222;
+    background-color: $wpdark;
   }
 
   .csf-footer{
     color: #555;
-    background-color: #050505;
+    background-color: $wpdark;
   }
 }
 

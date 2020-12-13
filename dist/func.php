@@ -1,47 +1,59 @@
 <?php 
 
-$option = get_option( jh_options_id );
+// Get The selected version
+if( !function_exists( 'jh_get_the_version' ) ) {
 
-function jh_get_version( $version ) {
-    wp_register_script('jquery', plugin_dir_url(__DIR__ ) . 'lib/jquery/core/'.$version.'/jquery.js', false, $version );
+    function jh_get_the_version( $version ) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', plugin_dir_url(__DIR__ ) . 'lib/jquery/core/'.$version.'/jquery.js', false, $version );
+        wp_enqueue_script('jquery');
+    }
 }
 
 // Loading jQuery version
-function jh_load_jquey_version() {
 
-    wp_deregister_script('jquery');
+if( !function_exists( 'jh_load_jquey_version' ) ) {
 
-    switch ( $option['jh-jq-version'] ) {
-        case 'prev-jq-wp':
-                jh_get_version('1.12.4');
-            break;
+    function jh_load_jquey_version() { 
 
-        case 'jq-wp-2-2-0':
-                jh_get_version('2.2.0');
-            break;
+        switch ( jh_get_the_option('jh-jq-version') ) {
+            case 'prev-jq-wp':
 
-        case 'jq-wp-2-1-0':
-                jh_get_version('2.1.0');
-            break;
-        
-        case 'jq-wp-2-0-0':
-                jh_get_version('2.0.0');
-            break;
+                    jh_get_the_version('1.12.4');
 
-        default:
-                jh_get_version('1.12.4');
-            break;
+                break;
+
+            case 'jq-wp-2-2-0':
+
+                    jh_get_the_version('2.2.0');
+
+                break;
+
+            case 'jq-wp-2-1-0':
+
+                    jh_get_the_version('2.1.0');
+
+                break;
+            
+            case 'jq-wp-2-0-0':
+
+                    jh_get_the_version('2.0.0');
+
+                break;
+            default : 
+                wp_enqueue_script('jquery');
+                break;
+
+        }
     }
-
-    wp_enqueue_script('jquery');
 }
 
 // Load in Frontend
-if( $option['jh-override-jquery'] ) {
+if( jh_get_the_option('jh-override-jquery') && jh_get_the_option('jh-jq-version') ) {
     add_action( 'init', 'jh_load_jquey_version' );
 }
 
 // Load in Backend
-if( $option['jh-override-jquery'] && $option['jh-backend-jquery']  ) {
+if( jh_get_the_option('jh-override-jquery') && jh_get_the_option('jh-backend-jquery') && jh_get_the_option('jh-jq-version') ) {
     add_action( 'admin_enqueue_scripts', 'jh_load_jquey_version' );
 }
