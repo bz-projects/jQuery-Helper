@@ -11,7 +11,6 @@ if( !function_exists( 'jh_get_the_version' ) ) {
 }
 
 // Loading jQuery version
-
 if( !function_exists( 'jh_load_jquey_version' ) ) {
 
     function jh_load_jquey_version() { 

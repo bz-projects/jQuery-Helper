@@ -3,57 +3,64 @@ Author URI: https://www.benjamin-zekavica.de
 Plugin URI: https://wordpress.org/plugins/jquery-helper
 Contributors: Benjamin_Zekavica
 Donate link: https://www.paypal.me/benjaminzekavica
-Tags: svg, svg support, upload svg, svg media, easy upload, easy-svg, easy svg, files, upload, icons, upload limit
-Requires at least: 5.6
-Tested up to: 5.5.1
-Requires PHP: 7.0
+Tags: jquery, jquery old version, jquery helper, javascript fixer, jQuery Helper, Swich jQuery version, wordpress jquery fixer
+Requires at least: 5.5
+Tested up to: 5.6
+Requires PHP: 7.4.12
 Stable tag: 1.0
 License: GNU Version 2 or Any Later Version
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
-This Plugin allows you to upload SVG Files into your Media library.
+This Plugin allows you to change the current WordPress jQuery version.
 
 == Description ==
 
 = Direct Upload SVG Files into WordPress  =
 
-EASY SVG Support is a Plugin which allows you to upload SVG Files into your Media library. This plugin was created for persons, who don’t need much options for SVG.
+jQuery Helper is a Plugin which allows you to change your WordPress jQuery version. Since WordPress 5.5 the jQuery was updated in the Core system and 
+more users have a problem because more plugin does't work anyone. With this plugin you can switch your jQuery version easy and perfectly.  
 
 = Features of the plugin include: =
 
-* Uploading SVG Support for WordPress
-* Easy installation
-* Display SVG Files in the Media Libary
-
+* Change your WordPress jQuery version
+* Easy to use
+* Option that you can load your choosed jQuery version in Backend and Frontend too
 
 = Documentation & Support =
 
-Got a problem or need help with Easy SVG Support? Than you can write me an e-mail:
+Got a problem or need help with jQuery Helper? Than you can write me an e-mail:
 
 info@benjamin-zekavica.de or you can ask your question in the forums section.
 
 == Installation ==
 
 1. Activate the plugin.
-2. Go to the Media Libary and Upload your SVG Files.
-3. Upload now your SVG Files.
-4. Go to the Page or ACF and choose your File and save changes.
+2. Go to Settings
+3. Click on "jQuery Helper" 
+4. Activate the Toggle to "On" 
+5. Choose your WordPress jQuery version
+6. Save your settings
 
 
 == Frequently Asked Questions ==
 
 = Which Features we create for next Updates? =
 
-One options panel, where you can customize your SVG Files and SVG Sprites.
+That depands how many people will use this plugin and which feature requests I get. But for the next months 
+I will give more support for updates and make this plugin much more easier. 
 
-= Do you need a Source Code? =
+= My jQuery version isn't available in the options. How can I add it?  =
+
+Please contact me: info@benjamin-zekavica.de and I will add it in the next update of the Plugin. 
+
+
+= Do you need a Source Code or you want to report a issue? =
 
 Please check out my repository on Github:
-https://github.com/bz-projects/jQuery-Helper
+[Github Repository](https://github.com/bz-projects/jQuery-Helper)
 
 == Screenshots ==
-1. Easy SVG Support in Gutenberg
-2. Upload direct into your WordPress Media
+1. Settings Panel
 
 
 == Changelog ==
@@ -61,6 +68,3 @@ https://github.com/bz-projects/jQuery-Helper
 = 1.0.0: December, 2020 =
 
 * Initial Release
-
-== Upgrade Notice ==
-This plugin can use on beginning versions of WordPress 4.0 to 4.9

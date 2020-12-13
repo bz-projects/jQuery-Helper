@@ -6,7 +6,7 @@ Description: Helper to load older versions of jQuery.
 Version:     1.0
 Author:      Benjamin Zekavica
 Author URI:  https://www.benjamin-zekavica.de
-Text Domain: jh
+Text Domain: jquery-helper
 Domain Path: /languages
 License:     GPL2
 
@@ -49,6 +49,7 @@ Web: www.benjamin-zekavica.de
 
 I don't give support by Mail. Please write in the
 community forum for questions and problems.
+
 */
 
 if ( !defined( 'ABSPATH' ) ) exit;
@@ -77,7 +78,7 @@ if( !function_exists( 'jh_settings_link' ) ) {
     function jh_settings_link( $links ) {
 
         $url            = get_admin_url() . 'options-general.php?page=jh_options';
-        $settings_link  = '<a href="' . $url . '">' . __('Settings', 'jh') . '</a>';
+        $settings_link  = '<a href="' . $url . '">' . __('Settings', 'jquery-helper') . '</a>';
         array_unshift( $links, $settings_link );
         
         return $links;
@@ -89,10 +90,11 @@ if( !function_exists( 'jh_settings_link' ) ) {
 if( !function_exists( 'jh_multiligual_textdomain' ) ) {
 
     function jh_multiligual_textdomain() {
-        load_plugin_textdomain( 'jh' , false, dirname( plugin_basename( __FILE__ ) ).'/languages' );
+        load_plugin_textdomain( 'jquery-helper', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
     }
     add_action( 'plugins_loaded', 'jh_multiligual_textdomain' );
-}
+} 
+
 
 /************************
 *   WordPress Options
