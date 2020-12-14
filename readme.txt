@@ -1,6 +1,6 @@
 ﻿=== jQuery Helper ===
 Author URI: https://www.benjamin-zekavica.de
-Plugin URI: https://wordpress.org/plugins/jquery-helper
+Plugin URI: https://bz-projects.github.io/jQuery-Helper
 Contributors: Benjamin_Zekavica
 Donate link: https://www.paypal.me/benjaminzekavica
 Tags: jquery, jquery old version, jquery helper, javascript fixer, jQuery Helper, Swich jQuery version, wordpress jquery fixer

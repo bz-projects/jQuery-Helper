@@ -100,7 +100,10 @@ if( !function_exists( 'jh_multiligual_textdomain' ) ) {
 *   WordPress Options
 ************************/ 
 
-// Required Options 
+// GITHUB Updater
+require( jh_url .'lib/update/plugin-update-checker.php');
+
+// Options Panel
 require( jh_url .'lib/options/init.php');
 require( jh_url .'vendor/options.php');
 
@@ -110,3 +113,11 @@ require( jh_url .'vendor/options.php');
 ************************/ 
 
 require( jh_url .'dist/func.php');
+
+// Updater
+$jhUpdater = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/bz-projects/jQuery-Helper',
+	__FILE__,
+	'jquery-helper'
+);
+$jhUpdater->getVcsApi()->enableReleaseAssets();
