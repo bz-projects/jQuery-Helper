@@ -7,7 +7,7 @@ Tags: jquery, jquery old version, jquery helper, javascript fixer, jQuery Helper
 Requires at least: 5.5
 Tested up to: 5.6
 Requires PHP: 7.4.12
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GNU Version 2 or Any Later Version
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -15,7 +15,7 @@ This Plugin allows you to change the current WordPress jQuery version.
 
 == Description ==
 
-= Direct Upload SVG Files into WordPress  =
+= jQuery Information  =
 
 jQuery Helper is a Plugin which allows you to change your WordPress jQuery version. Since WordPress 5.5 the jQuery was updated in the Core system and 
 more users have a problem because more plugin does't work anyone. With this plugin you can switch your jQuery version easy and perfectly.  
