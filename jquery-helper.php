@@ -3,7 +3,7 @@
 Plugin Name: jQuery Helper
 Plugin URI:  https://wordpress.org/plugins/jquery-helper
 Description: Helper to load older versions of jQuery.
-Version:     1.0.1
+Version:     1.0.2
 Author:      Benjamin Zekavica
 Author URI:  https://www.benjamin-zekavica.de
 Text Domain: jquery-helper
